@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+
+<body>
+    <script>
+        // Argument and Return
+        function calculateAreaWithArgumentAndReturn(radius) {
+            const value =  3.14 * radius * radius;
+            return value;
+        }
+        const result = calculateAreaWithArgumentAndReturn(3)
+        console.log("Area with Argument and Return: ",result);
+
+        // No Argument But Return
+        function calculateAreaWithNoArgumentButReturn() {
+            let radius = 5; 
+            return 3.14 * radius * radius;
+        }
+
+        console.log("Area with No Argument But Return:", calculateAreaWithNoArgumentButReturn());
+
+        // Argument But No Return
+        function calculateAreaWithArgumentButNoReturn(radius) {
+            let area = 3.14 * radius * radius;
+            console.log("Area with Argument But No Return:", area);
+        }
+        calculateAreaWithArgumentButNoReturn(4);
+
+        // No Argument And No Return
+        function calculateAreaWithNoArgumentAndNoReturn() {
+            let radius = 5; 
+            let area = 3.14 * radius * radius;
+            console.log("Area with No Argument But No Return:", area);
+        }
+        calculateAreaWithNoArgumentAndNoReturn();
+
+    </script>
+</body>
+
+</html>
