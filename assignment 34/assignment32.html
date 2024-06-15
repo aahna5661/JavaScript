@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        const students = ['Darshan', 'Aditya', 'Aditi']
+        console.log(students)
+        /* length of array */
+        console.log(students.length)
+
+        /* index of array */
+        const fruits = ['mango', 
+        'banana', 
+        'graps']
+        console.log(fruits[2])
+
+        /* array strore diffrent data value */
+        const Student = ['Darshan', '24', '45.7', 'true']
+        console.log(Student)
+
+        /* methods */
+        const student1 = ['Darshan', 
+        'Aditya', 
+        'Bharti', 
+        'Aditi']
+        console.log('before push:', student1)
+        student1.pop()
+        console.log('After push:', student1)
+
+        const colors = ['red', 'pink', 'green', 'blue']
+        console.log(colors)
+        console.log(colors.push('white','black'))
+        colors.pop()
+
+        const colors1 = ['red', 'pink', 'green', 'blue']
+        console.log(colors1)
+        console.log(colors1.shift('white','black'))
+
+        const colors2 = ['red', 'pink', 'green', 'blue']
+        console.log(colors2.indexOf('pink'))
+        console.log(colors2.slice('pink'))
+        console.log(colors2.unshift('white','black'))
+
+
+        const student = ['aditi','aditya','darshan','bharti','purvi']
+        console.log(student.length)
+        console.log(student.slice(2, 2 , 'adi'))
+        console.log(student)
+        console.log(student.includes('aditi'))
+        console.log(Array.isArray(student))
+        console.log(student.reverse())
+        console.log(student.sort())
+        console.log(student.sort().reverse())
+        console.log(student.join())
+    </script>
+
+</body>
+</html>
