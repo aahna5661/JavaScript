@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Date Difference Calculator</title>
+        <style>
+body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+
+    #datetime {
+      font-size: 24px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    #datetime {
+      font-size: 24px;
+    }
+    input[type="date"] {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  </head>
+  <body>
+    
+  <div class="container">
+    <h1>Date Difference Calculator</h1>
+    <div class="input-group">
+      <label for="date1">Date 1:</label>
+      <input type="date" id="date1">
+    </div>
+    <div class="input-group">
+      <label for="date2">Date 2:</label>
+      <input type="date" id="date2">
+    </div>
+    <button id="calculateButton">Calculate Difference</button>
+    <div id="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
