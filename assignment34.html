@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-DO App</title>
+  </head>
+  <style>
+    body {
+      background-image: url("bg.jpg");
+      background-repeat: no-repeat;
+      height: 617px;
+      background-size: cover;
+    }
+    .container {
+      background-color: aliceblue;
+      border: 0px solid blueviolet;
+      border-radius: 9px;
+      box-shadow: 4px 4px 2px rgb(152, 46, 152);
+      width: 500px;
+      height: 550px;
+      display: block;
+      margin-top: 150px;
+      margin-left: 530px;
+    }
+    .txt {
+      font-family: arial;
+      font-size: 28px;
+      padding: 25px;
+      background-color: black;
+      color: whitesmoke;
+      border-radius: 5px;
+    }
+    .list-card {
+        height: 380px;
+        overflow-y: scroll;
+    }
+    .list-elements {
+      padding: 10px 10px;
+      margin: 16px 10px;
+      border: 2px solid black;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .input-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #To-Do-input {
+      padding: 10px 10px;
+      width: 300px;
+      margin: 10px 20px;
+    }
+    #add-btn {
+      padding: 7px 20px;
+      cursor: pointer;
+      border-radius: 2px;
+      border: none;
+      background-color: black;
+      color: aliceblue;
+      font-family: arial;
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="txt" align="center">To-Do App</h1>
+      <div class="input-text">
+        <input type="text" id="To-Do-input" placeholder="Enter a Task" />
+        <button id="add-btn" type="button" onclick="addTask()">Add</button>
+      </div>
+      <div class="list-card" id="list-card"></div>
+    </div>
+    <script>
+
+              const ToDoList = [];
+              const listcard = document.getElementById("list-card");
+
+
+              function addTask(){
+                  const inputBox = document.getElementById("To-Do-input");
+                  const task = inputBox.value;
+                  if(task)
+                  {
+                      ToDoList.push(task);
+                      inputBox.value = "";
+                      loadList();
+                  }
+                  else{
+                      alert("Please Enter a Task");
+                  }
+              }
+
+              function loadList(){
+                  listcard.innerHTML = "";
+
+                  for (let i = 0; i < ToDoList.length; i++){
+                  const task = ToDoList[i];
+                  listcard.innerHTML += <div class="list-elements"> ${task} <span onclick="removeTask(${i})"><img src= "delete.png" height="30px"/></span> </div>;
+              }
+              }
+
+              function removeTask(index){
+
+                    ToDoList.splice(index, 1);
+                    loadList();
+                 }
+    </script>
+  </body>
+</html>
